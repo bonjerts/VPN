@@ -1,0 +1,28 @@
+proxies:  
+  - name: 🇸🇬 Alibaba Cloud
+    server: 104.17.3.81
+    type: vless
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    tls: true
+    bskip-cert-verify: true
+    servername: ari.bonjerts.workers.dev
+    network: ws
+    ws-opts:
+      path: /8.219.1.169-443
+      headers:
+        Host: ari.bonjerts.workers.dev
+    udp: true
+  - name: 🇸🇬 DigitalOcean
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 86768774-70b2-4c15-80c3-02066fb1e3b6
+    skip-cert-verify: true
+    sni: ari.bonjerts.workers.dev
+    network: ws
+    ws-opts:
+      path: /178.128.80.43-443
+      headers:
+        Host: ari.bonjerts.workers.dev
+    udp: true
